@@ -1,0 +1,13 @@
+
+
+services:
+  listener:
+    build: .
+    container_name: listener_app
+    restart: unless-stopped
+    networks:
+      - data-project_282346_airflow
+    
+networks:
+  data-project_282346_airflow:
+    external: true
